@@ -5,17 +5,29 @@ body{
 }
 
 .container{
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.explanation {
+.explanation{
     display: flex;
+    width: 80vw;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
+}
+
+.interactive__heading{
+    text-align: center;
+    width: 100%;
+}
+
+.interactive__input{
+    display: inline-block;
+    text-align: left;
 }
 
 #output{
