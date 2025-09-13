@@ -6,12 +6,7 @@
 function elementPrep(content, className, id){
         //Creates elements for the odd and even numbers or text to be stored in.
         let text = document.createElement("p");
-        if (className == "odd"){
-            text.className = "odd";
-        }
-        else {
-            text.className = "even";
-        }
+        className === "odd" ? text.className = "odd" : text.className = "even";
         if(id != null){
             text.id = id; //"oddLegend" or "evenLegend"
         }
@@ -31,9 +26,8 @@ function collatz(){
     let output = document.getElementById("output");
     let num = document.getElementById("number").value;
     output.innerHTML = ""; //clears the output for the next number, assuming the user is trying another number.
-    let arr = []; //Array to store the numbers in the sequence
-    arr.push(num);
-    console.log(num);
+    let stepsToOne = 1; //Counts the steps to reach 1. Starts at one as the user input is the first step.
+    num % 2 == 0 ? output.appendChild(elementPrep(num, "even", null)) : output.appendChild(elementPrep(num, "odd", null)); //Displays the user input number in the correct colour.
     if(num > 0){
         while (num != 1){ //If you don't have the loop break when it reaches 1, it will infinitely loop through 1, 4, 2, 1.
             if(num % 2 == 0) {
@@ -44,10 +38,9 @@ function collatz(){
                 num = num * 3 + 1;
                 output.appendChild(elementPrep(num, "odd", null));
             }
-            console.log(num); //For debugging
-            arr.push(num);
+            stepsToOne++;
         }
-        steps(arr.length);
+        steps(stepsToOne);
     }
     else {
         output.innerHTML = "Please enter a postive number or a number other than 0"; //Error message for negative numbers, 0, or no input
