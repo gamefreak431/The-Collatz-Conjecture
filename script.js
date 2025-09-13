@@ -42,6 +42,7 @@ function collatz(){
         steps(stepsToOne);
     }
     else {
+        steps(0); //Sets the steps to 0 if the input is invalid.
         output.id = "error"; //Changes the output id to error to apply error styling.
         output.innerHTML = "Please enter a postive number <br> or a number other than 0"; //Error message for negative numbers, 0, or no input
     }
