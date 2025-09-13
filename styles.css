@@ -117,3 +117,14 @@ iframe{
 .even#evenLegend{
     display: inline;
 }
+
+footer{
+    margin-top: 2rem;
+    text-align: left;
+    font-size: clamp(0.8rem, calc(1vw + 0.5rem), 1.2rem);
+}
+
+footer a{
+    color: yellow;
+    text-decoration: none;
+}
