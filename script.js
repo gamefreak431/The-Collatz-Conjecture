@@ -6,11 +6,9 @@
 function elementPrep(content, className, id){
         //Creates elements for the odd and even numbers or text to be stored in.
         const text = document.createElement("p");
-        className === "odd" ? text.className = "odd" : text.className = "even";
-        if(id != null){
-            text.id = id; //"oddLegend" or "evenLegend"
-        }
         text.innerHTML = content;
+        className === "odd" ? text.className = "odd" : text.className = "even";
+        if (id) { text.id = id; } //"oddLegend" or "evenLegend"
         return text;
 }
 
