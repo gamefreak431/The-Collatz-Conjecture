@@ -15,8 +15,10 @@ function elementPrep(content, className, id){
 function steps(length){
     const steps = document.getElementById("steps");
     steps.innerHTML = `Steps to One: ${length}`;
-    steps.appendChild(elementPrep("Odd Numbers", "odd", "oddLegend"));
-    steps.appendChild(elementPrep("Even Numbers", "even", "evenLegend"));
+    if (length > 0) {
+        steps.appendChild(elementPrep("Odd Numbers", "odd", "oddLegend"));
+        steps.appendChild(elementPrep("Even Numbers", "even", "evenLegend"));
+    }
 }
 
 function collatz(){
