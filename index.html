@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Collatz Conjecture</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>The Collatz Conjecture</h1>
+    <ul>
+        <li>Start with any positive number.</li>
+        <li>Then determine if the number is odd or even.</li>
+        <li>If the number is even: Divide it by two.</li>
+        <li>If the number is odd, multiply by three and add one.</li>
+    </ul>
+    <p>The conjecture is that no matter what number you pick, the sequence will always eventually reach 1.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/094y1Z2wpJg?si=V_eflaAWj5-m5j-2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h2>Try it Yourself!</h2>
+    <label for = "number">Enter a number:</label>
+    <input type="number" id="number" placeholder="any positive number">
+    <button onclick="collatz()">Submit</button>
+    <p id="steps"></p>
+    <p id="output"></p>
+    <script src="script.js"></script>
+</body>
+</html>
