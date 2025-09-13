@@ -54,6 +54,38 @@ iframe{
     text-align: left;
 }
 
+.interactive__button{
+    padding: 1rem 2rem;
+    background-color: midnightblue;
+    border: none;
+    color: white;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-top: 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.interactive__button::after{
+    content: '';
+    position: absolute;
+    height: 107%;
+    width: 102%;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom right, aqua, dodgerblue);
+    z-index: -1;
+}
+
+.interactive__button:hover{
+    z-index: 0;
+    box-shadow: 10px 0 20px rgba(0, 255, 255, 0.25), -10px 0 20px rgba(30, 143, 255, 0.25);
+}
+
 #output{
     display: flex;
     flex-direction: column;
