@@ -49,3 +49,11 @@ function collatz(){
         output.innerHTML = "Please enter a postive number <br> or a number other than 0"; //Error message for negative numbers, 0, or no input
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("number").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            collatz();
+        }
+    });
+});
