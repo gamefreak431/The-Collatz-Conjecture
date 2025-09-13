@@ -21,9 +21,10 @@ function steps(length){
 
 function collatz(){
     //Gets the number from the input, does the collatz algorithm on it, formats that to display on the page. Stores the numbers in an array for the steps.
-    const output = document.getElementById("output");
+    const output = document.querySelectorAll("#output, #error")[0]; //Selects the output or error element, whichever is present.
     let num = document.getElementById("number").value;
     output.innerHTML = ""; //clears the output for the next number, assuming the user is trying another number.
+    output.id = "output"; //Resets the output id to output in case it was changed to error from a previous invalid input.
     let stepsToOne = 1; //Counts the steps to reach 1. Starts at one as the user input is the first step.
     num % 2 == 0 ? output.appendChild(elementPrep(num, "even", null)) : output.appendChild(elementPrep(num, "odd", null)); //Displays the user input number in the correct colour.
     if(num > 0){
@@ -41,6 +42,7 @@ function collatz(){
         steps(stepsToOne);
     }
     else {
-        output.innerHTML = "Please enter a postive number or a number other than 0"; //Error message for negative numbers, 0, or no input
+        output.id = "error"; //Changes the output id to error to apply error styling.
+        output.innerHTML = "Please enter a postive number <br> or a number other than 0"; //Error message for negative numbers, 0, or no input
     }
 }
