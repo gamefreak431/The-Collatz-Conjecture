@@ -5,7 +5,7 @@
 
 function elementPrep(content, className, id){
         //Creates elements for the odd and even numbers or text to be stored in.
-        let text = document.createElement("p");
+        const text = document.createElement("p");
         className === "odd" ? text.className = "odd" : text.className = "even";
         if(id != null){
             text.id = id; //"oddLegend" or "evenLegend"
@@ -15,7 +15,7 @@ function elementPrep(content, className, id){
 }
 
 function steps(length){
-    let steps = document.getElementById("steps");
+    const steps = document.getElementById("steps");
     steps.innerHTML = `Steps to One: ${length}`;
     steps.appendChild(elementPrep("Odd Numbers, ", "odd", "oddLegend"));
     steps.firstElementChild.appendChild(elementPrep("Even Numbers, ", "even", "evenLegend")); //The legend explaining the colour code is two p elements. Appending one to the other means they will display inline while allowing me to style them indipendently.
@@ -23,7 +23,7 @@ function steps(length){
 
 function collatz(){
     //Gets the number from the input, does the collatz algorithm on it, formats that to display on the page. Stores the numbers in an array for the steps.
-    let output = document.getElementById("output");
+    const output = document.getElementById("output");
     let num = document.getElementById("number").value;
     output.innerHTML = ""; //clears the output for the next number, assuming the user is trying another number.
     let stepsToOne = 1; //Counts the steps to reach 1. Starts at one as the user input is the first step.
