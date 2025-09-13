@@ -15,8 +15,8 @@ function elementPrep(content, className, id){
 function steps(length){
     const steps = document.getElementById("steps");
     steps.innerHTML = `Steps to One: ${length}`;
-    steps.appendChild(elementPrep("Odd Numbers, ", "odd", "oddLegend"));
-    steps.firstElementChild.appendChild(elementPrep("Even Numbers, ", "even", "evenLegend")); //The legend explaining the colour code is two p elements. Appending one to the other means they will display inline while allowing me to style them indipendently.
+    steps.appendChild(elementPrep("Odd Numbers", "odd", "oddLegend"));
+    steps.appendChild(elementPrep("Even Numbers", "even", "evenLegend"));
 }
 
 function collatz(){
