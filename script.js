@@ -38,15 +38,14 @@ function collatz(){
     };
     output.id = "output"; //Resets the output id to output in case it was changed to error from a previous invalid input.
     let stepsToOne = 1; //Counts the steps to reach 1. Starts at one as the user input is the first step.
-    num % 2 === 0 ? output.appendChild(elementPrep(num, "even", null)) : output.appendChild(elementPrep(num, "odd", null)); //Displays the user input number in the correct colour.
     while (num != 1){ //If you don't have the loop break when it reaches 1, it will infinitely loop through 1, 4, 2, 1.
         if(num % 2 === 0) {
-            num /= 2;
             output.appendChild(elementPrep(num, "even", null));
+            num /= 2;
         }
         else {
-            num = (num * 3) + 1;
             output.appendChild(elementPrep(num, "odd", null));
+            num = (num * 3) + 1;
         }
         stepsToOne++;
     }
