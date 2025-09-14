@@ -89,8 +89,15 @@ iframe{
 
 #steps{
     font-size: clamp(1.2rem, calc(1vw + 0.5rem), 2rem);
-    margin-bottom: 1rem;
     text-align: center;
+}
+
+#legend{
+    display: flex;
+    justify-content: space-around;
+    font-size: clamp(1.2rem, calc(1vw + 0.5rem), 2rem);
+    text-align: center;
+
 }
 
 #output{
