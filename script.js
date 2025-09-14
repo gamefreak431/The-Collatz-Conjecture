@@ -49,7 +49,7 @@ function collatz(){
         }
         stepsToOne++;
     }
-    output.appendChild(elementPrep(1, "even", null)); //Appends the final 1 to the output.
+    output.appendChild(elementPrep(1, "odd", null)); //Appends the final 1 to the output.
     steps(stepsToOne);
 }
 
