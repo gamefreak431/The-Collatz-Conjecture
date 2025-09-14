@@ -41,11 +41,11 @@ function collatz(){
     num % 2 == 0 ? output.appendChild(elementPrep(num, "even", null)) : output.appendChild(elementPrep(num, "odd", null)); //Displays the user input number in the correct colour.
     while (num != 1){ //If you don't have the loop break when it reaches 1, it will infinitely loop through 1, 4, 2, 1.
         if(num % 2 == 0) {
-            num = num / 2;
+            num /= 2;
             output.appendChild(elementPrep(num, "even", null));
         }
         else {
-            num = num * 3 + 1;
+            num = (num * 3) + 1;
             output.appendChild(elementPrep(num, "odd", null));
         }
         stepsToOne++;
