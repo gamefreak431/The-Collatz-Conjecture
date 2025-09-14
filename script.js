@@ -16,8 +16,9 @@ function steps(length){
     const steps = document.getElementById("steps");
     steps.innerHTML = `Steps to One: ${length}`;
     if (length > 0) {
-        steps.appendChild(elementPrep("Odd Numbers", "odd", "oddLegend"));
-        steps.appendChild(elementPrep("Even Numbers", "even", "evenLegend"));
+        const legend = document.getElementById("legend");
+        legend.appendChild(elementPrep("Odd Numbers", "odd", "oddLegend"));
+        legend.appendChild(elementPrep("Even Numbers", "even", "evenLegend"));
     }
 }
 
